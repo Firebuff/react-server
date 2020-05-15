@@ -112,6 +112,9 @@ router.get('/user', (req, res) => {
     })
 })
 
+router.get('/list', (req, res) => {
+    res.json([1,2,3,4])
+})
 
 
 
