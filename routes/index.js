@@ -47,7 +47,6 @@ router.post('/register', (req, res, next) => {
 // 登录
 router.post('/login', (req, res, next) => {
     let { username, password } = req.body
-
     userModel.findOne({ username, password: md5(password)}, (err,resData) => {
         if (err) {
             console.log(err)
@@ -111,13 +110,6 @@ router.get('/user', (req, res) => {
         }
     })
 })
-
-router.get('/list', (req, res) => {
-    res.json([1,2,3,4])
-})
-
-
-
 
 
 
