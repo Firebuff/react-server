@@ -6,13 +6,6 @@ var express = require('express');
 var router = express.Router();
 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', {title: 'Express'})
-});
-
-
-
 // 注册
 router.post('/register', (req, res, next) => {
     const { username, password, type } = req.body
@@ -111,7 +104,12 @@ router.get('/user', (req, res) => {
     })
 })
 
+router.get('/',function (req, res, next) {
 
+    res.setHeader('Content-type','text/html;charset=utf-8')
+    
+    res.render('index',{name:'welcome to express'})
+})
 
 
 module.exports = router;
