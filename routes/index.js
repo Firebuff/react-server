@@ -111,5 +111,4 @@ router.get('/',function (req, res, next) {
     res.render('index',{name:'welcome to express'})
 })
 
-
 module.exports = router;
