@@ -21,17 +21,17 @@ const userSchema = mongoose.Schema({
     },
 
     // 头像
-    header: {
+    image: {
         type: String
     },
 
     //职位
-    post: {
+    position: {
         type: String
     },
 
     //个人简介
-    post: {
+    introduce: {
         type: String
     },
 
